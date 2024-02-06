@@ -5,11 +5,15 @@ body{
 
 h1,p{
   color: white;
+  text-align: center;
+  font: 100px;
 }
 .nav{
   color: white;
   margin: 50px;
   padding: 50px;
+  text-align: center;
+  font: 100px;
 }
 
 #grid{
