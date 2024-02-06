@@ -8,6 +8,8 @@ h1,p{
 }
 .nav{
   color: white;
+  margin: 50px;
+  padding: 50px;
 }
 
 #grid{
