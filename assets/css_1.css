@@ -3,9 +3,14 @@ body{
   margin:0;
 }
 
-h1{
+h1,p{
   color: white;
 }
 .nav{
   color: white;
+}
+
+#grid{
+  display: grid;
+  grid-template-columns: 300px 1fr 1fr 1fr;
 }
