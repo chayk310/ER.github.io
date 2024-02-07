@@ -1,102 +1,39 @@
-body, ul, li {
-    margin:0;
-    padding:0;
-    list-style:none;
+.box{
+  width: 1600px; 
+  margin: 0 auto; /**중앙 정렬한다.**/
 }
 
-.slider-2 {
-    height:400px;
-    position:relative;
+/**사진**/
+.slide{
+  width:1600px; height:900px;
+  overflow: hidden;
+}
+.images{
+  display: flex;
+  height:900px;
+  transition: transform 0.5s;
+}
+img{
+  width:1600px; height:900px;
 }
 
-.slider-2 .slides > div {
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background-position:center;
-    /* 이미지를 최대한 안짤리게 한다. */
-    background-size:cover;
-    /* 배경 반복 금지 */
-    background-repeat:no-repeat;
-    opacity:0;
-    transition: opacity 0.5s;
+.back{
+  position:relative;
+  bottom: 170px; right: 35px;
+}
+.next{
+  position:relative;
+  bottom: 170px; left: 220px;
 }
 
-.slider-2 .slides > div.active {
-    opacity:1;
+button{
+  width: 30px; height: 30px;
+  color: white;
+  background: #343454;
 }
-
-@media ( max-width:700px ) {
-    .slider-2 {
-        height:300px;
-    }
+button:active{
+  background:#3e3e3e;
 }
-
-.slider-2 .page-nav {
-    position:absolute;
-    width:100%;
-    text-align:center;
-    bottom:0;
-    left:0;
+button:disabled{
+  background: #cbcaca;
 }
-
-.slider-2 .page-nav > div {
-    display:inline-block;
-    width:15px;
-    height:15px;
-    background-color:rgba(255,255,255,0.5);
-    border-radius:2px;
-    cursor:pointer;
-}
-
-.slider-2 .page-nav > div.active {
-    background-color:rgba(255,255,255,1);
-}
-
-.slider-2>.side-btns>div{
-    position:absolute;
-    top:0;
-    left:0;
-    width:30%;
-    height:100%;
-    cursor:pointer;
-    z-index:10;
-
-}
-
-.slider-2>.side-btns>div>span:active{
-    transform:translatey(-40%);
-}
-.slider-2>.side-btns>div:last-child{
-    left:auto;
-    right:0;
-}
-
-.slider-2>.side-btns>div>span{
-    position:absolute;
-    top:50%;
-    transform:translatey(-50%);
-    left:inherit;
-    right:inherit;
-    width:70px;
-    height:70px;
-    background-color:rgba(255,255,255,0.4);
-    border-radius:100%;
-    margin:0 10px;
-}
-.slider-2>.side-btns>div>span > i{
-    position:absolute;
-    top:50%;
-    left:50%;
-    font-size:3rem;
-    color:rgba(0,0,0,0.4);
-    transform:translateX(-70%) translateY(-50%);
-}
-
-.slider-2>.side-btns>div:last-child>span > i {
-    transform:translateX(-20%) translateY(-50%);
-}
-
-/* 슬라이드 버튼 끝 */
