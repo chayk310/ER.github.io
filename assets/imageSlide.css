@@ -29,27 +29,25 @@
 
 
 .slider__btn a {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            background-color: #ffffffbd;
-            transition: all 0.3s ease;
-        }
-        .slider__btn a:hover {
-            border-radius: 50%;
-            background-color: rgb(245, 242, 67);
-            color: #000;
-        }
-        .slider__btn a.prev {
-            left: 0;
-        }
-        .slider__btn a.next {
-            right: 0;
-        }
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+.slider__btn a:hover {
+  color: rgba(0, 0, 0,0.8);
+}
+.slider__btn a.prev {
+  left: 0;
+}
+.slider__btn a.next {
+  right: 0;
+}
 .next{
   right:0;
   border-radius: 3px 0 0 3px;
