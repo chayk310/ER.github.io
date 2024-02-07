@@ -1,39 +1,37 @@
-let pages = 0;//현재 인덱스 번호
-let positionValue = 0;//images 위치값
-const IMAGE_WIDTH = 250;//한번 이동 시 IMAGE_WIDTH만큼 이동한다.
-//DOM
-const backBtn = document.querySelector(".back")
-const nextBtn = document.querySelector(".next")
-const images = document.querySelector(".images")
+const images = document.querySelectorAll('.slider span');
+const sliderContainer = document.querySelector('slider-container');
+const slider = document.querySelector('.slider');
+const prevBtn = document.querySelector('.leftBtn');
+const nextBtn = document.querySelector('.rightBtn');
 
-function next() {
-  if (pages< 2) {
-    backBtn.removeAttribute('disabled')//뒤로 이동해 더이상 disabled가 아니여서 속성을 삭제한다.
-    positionValue -= IMAGE_WIDTH;//IMAGE_WIDTH의 증감을 positionValue에 저장한다.
-    images.style.transform = `translateX(${positionValue}px)`;
-		//x축으로 positionValue만큼의 px을 이동한다.
-    pages += 1; //다음 페이지로 이동해서 pages를 1증가 시킨다.
-  }
-  if (pages === 2) { //
-    nextBtn.setAttribute('disabled', 'true')//마지막 장일 때 next버튼이 disabled된다.
-  }
-}
+let current = 1;
+const imgSize = images[0].clientWidth;
 
-function back() {
-  if (pages > 0) {
-    nextBtn.removeAttribute('disabled')
-    positionValue += IMAGE_WIDTH;
-    images.style.transform = `translateX(${positionValue}px)`;
-    pages -= 1; //이전 페이지로 이동해서 pages를 1감소 시킨다.
-  }
-  if (pages === 0) {
-    backBtn.setAttribute('disabled', 'true')//마지막 장일 때 back버튼이 disabled된다.
-  }
-}
+slider.style.transform = `translateX(${-imgSize}px)`;
 
-function init() {  //초기 화면 상태
-  backBtn.setAttribute('disabled', 'true'); //속성이 disabled가 된다.
-  backBtn.addEventListener("click", back); //클릭시 다음으로 이동한다.
-  nextBtn.addEventListener("click", next);//클릭시 이전으로 이동한다.
-}
-init();
+prevBtn.addEventListener('click',()=>{
+    if( current <= 0) return;
+    slider.style.transition = '400ms ease-in-out transform';
+    current--;
+    slider.style.transform = `translateX(${-imgSize * current}px)`;
+})
+
+nextBtn.addEventListener('click',()=>{
+    if( current >= images.length -1 ) return;
+    slider.style.transition = '400ms ease-in-out transform';
+    current++;
+    slider.style.transform = `translateX(${-imgSize * current}px)`;
+})
+
+slider.addEventListener('transitionend', ()=> {
+    if(images[current].classList.contains('first-img')){
+        slider.style.transition = 'none';
+        current = images.length - 2;
+        slider.style.transform = `translateX(${-imgSize * current}px)`;
+    }
+    if(images[current].classList.contains('last-img')){
+        slider.style.transition = 'none';
+        current = images.length - current;
+        slider.style.transform = `translateX(${-imgSize * current}px)`;
+    }
+})
