@@ -1,6 +1,8 @@
-#slide{
-  width: 1600px; 
-  margin: 0 auto;
+#slide {
+    width:100%;
+    padding: 0 15vw;
+    position: relative;
+    margin:1vw 0 0 0;
 }
 
 #slide i{
@@ -8,7 +10,7 @@
 }
 
 #slide .slider_container{
-  width:1600px; height:900px;
+  width: 100%;
   overflow: hidden;
 }
 
