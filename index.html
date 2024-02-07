@@ -25,10 +25,20 @@
     <article>
       <h1>이터널 리턴 </h1>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/t_ve4W2GZkQ?si=iws_SXcYfolRX3Y4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <div>
-        <img src="assets/images/Main.png" width="560" height="315">
-        <img src="assets/images/EA3.png" width="560" height="315">
-        <img src="assets/images/EA1.png" width="560" height="315">
+      <div class="slider">
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
+        <ul id="imgholder" class="imgs">
+          <li><img src="assets/images/Main.png" ></li>
+          <li><img src="assets/images/EA3.png" ></li>
+          <li><img src="assets/images/EA1.png"></li>
+        </ul>
+        <div class="bullets">
+          <label for="slide1">&nbsp;</label>
+          <label for="slide2">&nbsp;</label>
+          <label for="slide3">&nbsp;</label>
+        </div>
       </div>
 
     </article>
