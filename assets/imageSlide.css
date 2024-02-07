@@ -1,13 +1,43 @@
-.box{
+#slide{
   width: 1600px; 
   margin: 0 auto;
 }
 
-/**사진**/
-.slide{
+#slide i{
+  font-size: 30px;
+}
+
+#slide .slider_container{
   width:1600px; height:900px;
   overflow: hidden;
 }
+
+#slide .slider_container span{
+  position:absolute;
+  z-index: 99;
+  top:50%;
+  cursor: pointer;
+}
+
+#slide .slider_container .leftBtn{
+  left: 12%;
+  tranform: translate(0,-50%);
+}
+#slide .slider_container .rightBtn{
+  right: 12%;
+  tranform: translate(0,-50%);
+}
+#slide .slider-container .slider{
+    display:flex;
+    width: 101%;
+}
+
+#slide .slider-container .slider span{
+    display: block;
+    position: relative;
+    min-width: 100%;
+}
+/*
 .images{
   display: flex;
   height:900px;
@@ -15,25 +45,4 @@
 }
 .images img{
   width:1600px; height:900px;
-}
-
-.back{
-  position:relative;
-  bottom: 170px; right: 35px;
-}
-.next{
-  position:relative;
-  bottom: 170px; left: 220px;
-}
-
-button{
-  width: 30px; height: 30px;
-  color: white;
-  background: #343454;
-}
-button:active{
-  background:#3e3e3e;
-}
-button:disabled{
-  background: #cbcaca;
-}
+}*/
