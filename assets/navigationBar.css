@@ -9,14 +9,15 @@ body{
   display: flex;
   /*justify-content 가로방향 정렬*/
   align-items: center; /*세로방향 정렬*/
-  padding: 10px 10px;;
+  padding: 10px 10px;
   background-color: black;
 }
 
 .nb a{
   text-decoration: none;
   color: white;
-  font: bold 50px;
+  font-size: 50px;
+  font-weight: bold;
 }
 
 .nb .menu{
