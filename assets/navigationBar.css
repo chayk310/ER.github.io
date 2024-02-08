@@ -4,29 +4,5 @@ body{
   background-color: rgb(34,34,54);
 }
 
-.nb{
-  width: 100%;
-  position: relative;
-  text-align: center;
-}
-
-.nb a{
-  display: block;
-  font-size: 30px;
-  color: white;
-  font-weight: 900;
-  position: absolute;
-  left: 30px;
-}
-
-.nb .menu {
-  display: inline-block;
-}
-
-.nb .menu li{
-  float: left;
-  line-height: 80px;
-  padding: 0 30px;
-}
 
 
