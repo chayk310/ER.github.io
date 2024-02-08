@@ -7,24 +7,25 @@ body{
 
 .nb{
   display: flex;
-  justify-content: space-between; /*가로방향 정렬*/
+  /*justify-content 가로방향 정렬*/
   align-items: center; /*세로방향 정렬*/
   padding: 10px 10px;;
   background-color: black;
 }
 
-a{
+.nb a{
   text-decoration: none;
   color: white;
+  font: bold 50px;
 }
 
-.menu{
+.nb .menu{
   list-style: none;
   display:flex;
   margin:0;
   padding-left:0;
 }
 
-.menu{
+.nb .menu li{
   padding: 0px 30px;
 }
