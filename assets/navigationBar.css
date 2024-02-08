@@ -4,19 +4,18 @@ body{
   background-color: rgb(34,34,54);
 }
 
-
 .nb{
   display: flex;
   /*justify-content 가로방향 정렬*/
   align-items: center; /*세로방향 정렬*/
-  padding: 10px 10px;
-  background-color: black;
+  padding: 20px 10px;
+  background-color: rgb(8,8,8);
 }
 
 .nb a{
   text-decoration: none;
   color: white;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bold;
 }
 
