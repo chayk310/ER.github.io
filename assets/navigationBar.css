@@ -5,3 +5,26 @@ body{
 }
 
 
+.nb{
+  display: flex;
+  justify-content: space-between; /*가로방향 정렬*/
+  align-items: center; /*세로방향 정렬*/
+  padding: 10px 10px;;
+  background-color: black;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.menu{
+  list-style: none;
+  display:flex;
+  margin:0;
+  padding-left:0;
+}
+
+.menu{
+  padding: 10px 20px;
+}
