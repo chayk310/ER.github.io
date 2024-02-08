@@ -4,10 +4,29 @@ body{
   background-color: rgb(34,34,54);
 }
 
-h1,p{
-  color: white;
+#nb{
+  width: 100%;
+  position: relative;
   text-align: center;
-  font-size: 50px;
+}
+
+#nb a{
+  line-height: 80px;
+  display: block;
+  font-size: 30px;
+  color: white;
+  font-weight: 900;
+  position: absolute;
+  left: 30px;
+}
+
+#nb ul {
+  display: inline-block;
+}
+#nb ul li {
+  float: left;
+  line-height: 80px;
+  padding: 0 30px;
 }
 
 
