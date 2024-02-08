@@ -9,15 +9,5 @@ h1,p{
   text-align: center;
   font-size: 50px;
 }
-.nav{
-  color: white;
-  margin: 50px;
-  padding: 50px;
-  text-align: center;
-  font-size: 50px;
-}
 
-#grid{
-  display: grid;
-  grid-template-columns: 300px 1fr;
-}
+
