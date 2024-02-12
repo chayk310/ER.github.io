@@ -1,37 +1,34 @@
-const images = document.querySelectorAll('.slider span');
-const sliderContainer = document.querySelector('slider-container');
-const slider = document.querySelector('.slider');
-const prevBtn = document.querySelector('.leftBtn');
-const nextBtn = document.querySelector('.rightBtn');
+window.onload = function() {
+  const kindWrap =  document.querySelector('.slide');
+  const slider = kindWrap.querySelector('.slider_img');
+  const slideLis = slider.querySelectorAll('li')
+  const moveButton = kindWrap.querySelector('.LR');
 
-let current = 1;
-const imgSize = images[0].clientWidth;
+  /* ul 넓이 계산해 주기 */
+  const liWidth = slideLis[0].clientWidth;
+  const sliderWidth = liWidth * slideLis.length;
+  slider.style.width = `${sliderWidth}px` ;
 
-slider.style.transform = `translateX(${-imgSize}px)`;
+  /* 리스너 설치하기 */
+  let currentIdx = 0; // 슬라이드 현재 번호
+  let translate = 0; // 슬라이드 위치 값
+  moveButton.addEventListener('click', moveSlide);
 
-prevBtn.addEventListener('click',()=>{
-    if( current <= 0) return;
-    slider.style.transition = '400ms ease-in-out transform';
-    current--;
-    slider.style.transform = `translateX(${-imgSize * current}px)`;
-})
+  function moveSlide(event) {
+    event.preventDefault();
+    if (event.target.className === 'next') {
+      if (currentIdx !== slideLis.length -1) {
+        translate -= liWidth;
+        slider.style.transform = `translateX(${translate}px)`;
+        currentIdx += 1;
+      }
+    } else if (event.target.className === 'prev') {
+        if (currentIdx !== 0) {
+          translate += liWidth;
+          slider.style.transform = `translateX(${translate}px)`;
+          currentIdx -= 1;
+        }
+      }
+  }
 
-nextBtn.addEventListener('click',()=>{
-    if( current >= images.length -1 ) return;
-    slider.style.transition = '400ms ease-in-out transform';
-    current++;
-    slider.style.transform = `translateX(${-imgSize * current}px)`;
-})
-
-slider.addEventListener('transitionend', ()=> {
-    if(images[current].classList.contains('first-img')){
-        slider.style.transition = 'none';
-        current = images.length - 2;
-        slider.style.transform = `translateX(${-imgSize * current}px)`;
-    }
-    if(images[current].classList.contains('last-img')){
-        slider.style.transition = 'none';
-        current = images.length - current;
-        slider.style.transform = `translateX(${-imgSize * current}px)`;
-    }
-})
+}
