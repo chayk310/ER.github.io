@@ -25,14 +25,18 @@ li{
   vertical-align: top;
 }
 
+.slide .LR{
+  font-size: 50px;
+  font-weight: bold;
+}
 .slide .LR > a.prev{
   position: absolute; 
   left:-50px; 
-  top:450px;
+  top:540px;
 }
 
 .slide .LR > a.next{
   position: absolute; 
   right:-50px; 
-  top:450px;
+  top:540px;
 }
