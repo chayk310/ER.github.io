@@ -1,1 +1,38 @@
+li{
+  list-style: none;
+}
 
+.slide{
+  width: 100%;
+  margin: 0 auto;
+  position: relarive;
+}
+
+.slide > .slider{
+  overflow: hidden;
+}
+
+.slide > .slider .slider_img{
+  position: relative;
+  transition: 0.5s;
+}
+
+.slide > .slider .slider_img li{
+  float: left;
+}
+
+.slide > .slider img{
+  vertical-align: top;
+}
+
+.slide .LR > a.prev{
+  position: absolute; 
+  left:-50px; 
+  top:450px;
+}
+
+.slide .LR > a.next{
+  position: absolute; 
+  right:-50px; 
+  top:450px;
+}
