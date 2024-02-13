@@ -1,4 +1,4 @@
-window.onload = function() {
+
   const kindWrap =  document.querySelector('.kind_wrap');
   const slider = kindWrap.querySelector('.slider');
   const slideLis = slider.querySelectorAll('li')
@@ -30,5 +30,3 @@ window.onload = function() {
         }
       }
   }
-
-}
