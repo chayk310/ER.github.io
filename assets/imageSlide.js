@@ -8,16 +8,19 @@ window.onload = function() {
   const liWidth = slideLis[0].clientWidth;
   const sliderWidth = liWidth * slideLis.length;
   slider.style.width = `${sliderWidth}px` ;
+  
 
   /* 리스너 설치하기 */
   let currentIdx = 0; // 슬라이드 현재 번호
   let translate = 0; // 슬라이드 위치 값
+  const speedTime = 500;
   moveButton.addEventListener('click', moveSlide);
 
   function move(n){
+        currentIdx += (-1 * n);
         translate += n * liWidth;
         slider.style.transform = `translateX(${translate}px)`;
-        currentIdx += (-1 * n);
+        slider.style.transition = `all ${speedTime}ms ease`;
   }
   
   function moveSlide(event) {
