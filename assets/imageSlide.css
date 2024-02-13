@@ -16,7 +16,6 @@ li {
 }
 .kind_wrap > .kind_slider .slider { 
   position: relative; 
-  transition: 0.5s;
 }
 .kind_wrap > .kind_slider .slider li {
   float:left;
