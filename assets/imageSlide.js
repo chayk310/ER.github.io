@@ -14,19 +14,21 @@ window.onload = function() {
   let translate = 0; // 슬라이드 위치 값
   moveButton.addEventListener('click', moveSlide);
 
+  function move(n){
+        translate += n * liWidth;
+        slider.style.transform = `translateX(${translate}px)`;
+        currentIdx += (-1 * n);
+  }
+  
   function moveSlide(event) {
     event.preventDefault();
     if (event.target.className === 'next') {
       if (currentIdx !== slideLis.length -1) {
-        translate -= liWidth;
-        slider.style.transform = `translateX(${translate}px)`;
-        currentIdx += 1;
+          move(-1);
       }
     } else if (event.target.className === 'prev') {
         if (currentIdx !== 0) {
-          translate += liWidth;
-          slider.style.transform = `translateX(${translate}px)`;
-          currentIdx -= 1;
+          move(1);
         }
       }
   }
